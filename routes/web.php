@@ -19,5 +19,5 @@ Route::get('/', function () {
 });
 
 Route::group(['as'=>'admin.','prefix'=>'admin'],function () {
-   Route::get('dashboard', [HomeController::class, 'index']);
+   Route::get('dashboard', [HomeController::class, 'index']) -> name('dashboard');
 });
